@@ -12,7 +12,7 @@ public class PCB {
 		this.isReady=isReady;
 	}
 	public void display() {
-		System.out.println("Process Name: "+name+" Time: "+costTime+" Priority "+priority);
+		System.out.println("\nProcess Name: "+name+" Time: "+costTime+" Priority "+priority);
 		
 	}
 	
