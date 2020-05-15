@@ -68,7 +68,7 @@ public class Memory {
 				j++;
 			}
 			else {
-				System.out.println("分区号:    "+" 大小: "+allList.get(i).len+"KB "+"起始地址: "+allList.get(i).addr+" 状态: 空闲");
+				System.out.println("分区号:  "+" 大小: "+allList.get(i).len+"KB "+"起始地址: "+allList.get(i).addr+" 状态: 空闲");
 				
 			}
 		}
