@@ -9,7 +9,7 @@ int main(){
 	int temp = getpid();
 	while (count < 2) {
 		status = fork();
-		if (status == 0 || status == -1)break;
+		if (status == 0 )break;
 		count++;
 		
 	}
@@ -17,11 +17,16 @@ int main(){
 		cout << "创建失败" << endl;
 	}
 	else if (status == 0) {
-
-		cout << "子进程 pid:" <<getpid()<<"  "<<char(display+(getpid()-temp))<< endl;
+		for (int i = 0;i<10;i++) {
+			cout << "子进程 pid:" << getpid() << "  " << char(display + (getpid() - temp)) << endl;
+		}
+		return 0;
 	}
 	else {
-		cout << "父进程 pid:"  <<getpid()<<"  "<<char(display + (getpid() - temp)) <<endl;
+		for (int i = 0; i < 10; i++) {
+			cout << "父进程 pid:" << getpid() << "  " << char(display + (getpid() - temp)) << endl;
+		}
+		return 0;
 	}
 	
 	

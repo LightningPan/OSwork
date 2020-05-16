@@ -1,7 +1,5 @@
 package OS3;
 
-import java.util.Scanner;
-
 public class Service {
 	Map map;
 	public Service(int x,int y,int z) {

@@ -18,7 +18,7 @@ public class Main {
 		while(true) {
 			int status=0;
 			System.out.println("请选择:");
-			System.out.println("1:添加进程"+"  2:申请资源"+"  3:显示"+"  4:退出");
+			System.out.println("1:添加进程"+"  2:申请资源"+"  3:显示"+"  4:安全性检测"+"  5:退出");
 			status=scanner.nextInt();
 			switch(status){
 				case 1:{
@@ -55,6 +55,15 @@ public class Main {
 					break;
 				}
 				case 4:{
+					if(sys.CheckSecurity(sys.available, sys.process.get(0).Allocation, sys.process.get(0).Need, 0)) {
+						System.out.println("安全");
+					}
+					else {
+						System.out.println("不安全");
+					}
+					break;
+				}
+				case 5:{
 					scanner.close();
 					return;
 				}
