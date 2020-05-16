@@ -10,7 +10,10 @@ public class Service {
 	public List<PCB> ReadyList=new LinkedList<PCB>();
 	
 	public void run() {
+		while(true) {
 		if(ReadyList.isEmpty()) return;
+		display();
+		System.out.println();
 		ReadyList.get(0).priority--;
 		ReadyList.get(0).costTime--;
 		if(ReadyList.get(0).costTime==0) {
@@ -20,7 +23,15 @@ public class Service {
 		else {
 			sort();
 		}
+		}
 		
+	}
+	
+	private void display() {
+		System.out.println("Runnnig:"+ReadyList.get(0).name);
+		for(int i=1;i<ReadyList.size();i++) {
+			ReadyList.get(i).display();
+		}
 	}
 	
 	public void sort() {

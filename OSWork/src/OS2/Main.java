@@ -23,7 +23,7 @@ public class Main {
 			case 2:{
 				System.out.println("请输入要回收的分区号");
 				int temp=sc.nextInt();
-				if(temp>=memory.mallocedList.size()) {
+				if(temp>memory.mallocedList.size()) {
 					System.out.println("输入有误");
 					break;
 				}
